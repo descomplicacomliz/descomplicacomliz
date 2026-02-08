@@ -160,7 +160,7 @@ export function BookSection() {
                   className="cta-glow group h-12 rounded-full bg-foreground px-6 text-background shadow-lg hover:bg-[hsl(var(--accent))]"
                 >
                   <a
-                    href="https://pay.kiwify.com.br/LINK_DO_LIVRO"
+                    href="https://pay.kiwify.com.br/pvxBUI7"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2"
