@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Check, X, ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function TransformationSection() {
   return (
@@ -15,23 +17,28 @@ export function TransformationSection() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {[{
-            title: "Antes da Mentoria",
-            items: [
-              "O mês começa sem plano e termina no aperto",
-              "Decisões no impulso (culpa depois)",
-              "Imprevistos viram caos e atrasos",
-              "Ansiedade ao olhar para a conta",
-            ],
-          }, {
-            title: "Depois da Mentoria",
-            items: [
-              "Clareza total: você sabe exatamente o que entra e o que sai",
-              "Decisões conscientes (sem autoengano e sem culpa)",
-              "Estrutura para imprevistos — sem desmoronar",
-              "Rotina simples e sustentável que cabe na sua vida real",
-            ],
-          }].map((col, idx) => (
+          {[
+            {
+              title: "Antes da Mentoria",
+              icon: X,
+              items: [
+                "O mês começa sem plano e termina no aperto",
+                "Decisões no impulso (culpa depois)",
+                "Imprevistos viram caos e atrasos",
+                "Ansiedade ao olhar para a conta",
+              ],
+            },
+            {
+              title: "Depois da Mentoria",
+              icon: Check,
+              items: [
+                "Clareza total: você sabe exatamente o que entra e o que sai",
+                "Decisões conscientes (sem autoengano e sem culpa)",
+                "Estrutura para imprevistos — sem desmoronar",
+                "Rotina simples e sustentável que cabe na sua vida real",
+              ],
+            },
+          ].map((col, idx) => (
             <Card
               key={idx}
               className="group rounded-3xl border-border/60 bg-white/10 p-7 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] hover:border-white/40 hover:bg-white/15 hover:shadow-[0_26px_70px_-44px_rgba(0,0,0,0.70)]"
@@ -44,10 +51,15 @@ export function TransformationSection() {
                 {col.items.map((t, i) => (
                   <li key={i} className="flex items-start gap-3" data-testid={`row-transformacao-${idx}-${i}`}>
                     <span
-                      className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] shadow-sm transition-transform duration-300 group-hover:scale-[1.06]"
+                      className={cn(
+                        "mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full shadow-sm transition-transform duration-300 group-hover:scale-[1.06]",
+                        col.icon === X
+                          ? "bg-red-500 text-black"
+                          : "bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))]"
+                      )}
                       aria-hidden
                     >
-                      <Check className="h-4 w-4" />
+                      <col.icon className="h-4 w-4" />
                     </span>
                     <span>{t}</span>
                   </li>
@@ -55,6 +67,19 @@ export function TransformationSection() {
               </ul>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button
+            asChild
+            className="cta-glow group h-12 rounded-full bg-[hsl(var(--accent))] px-8 text-[hsl(var(--accent-foreground))] shadow-lg hover:bg-[hsl(var(--accent))]/90 transition-all"
+            data-testid="button-transformation-cta"
+          >
+            <a href="#form-captacao" className="inline-flex items-center gap-2">
+              Sim, quero essa transformação
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

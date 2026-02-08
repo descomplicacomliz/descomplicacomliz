@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
 export function TruthSection() {
   return (
     <section className="relative overflow-hidden bg-foreground text-background" id="verdade">

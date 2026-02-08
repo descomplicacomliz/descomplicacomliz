@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Brain, Navigation, Wrench, HandHeart } from "lucide-react";
+import { Brain, Navigation, Wrench, HandHeart, ArrowRight } from "lucide-react";
 
 export function DifferentialSection() {
   return (
@@ -39,8 +40,8 @@ export function DifferentialSection() {
             title: "Método autoral desenvolvido na prática",
             paragraphs: [
               "Leitura estratégica de contexto desenvolvida com minha experiência de mais de 24 anos atendendo pessoas em instituições financeiras.",
-              "Observo padrões, comportamento e decisões recorrentes.",
-              "Traduzo números em escolhas práticas, e escolhas em comportamento sustentável.",
+              "Observo padrões, comportamentos e decisões recorrentes.",
+              "Traduzo números em escolhas práticas, e escolhas em comportamentos sustentáveis.",
             ],
           },
           {
@@ -94,6 +95,19 @@ export function DifferentialSection() {
             </div>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-12 flex justify-center">
+        <Button
+          asChild
+          className="group h-12 rounded-full bg-foreground px-8 text-background shadow-lg shadow-black/10 hover:bg-[hsl(var(--accent))] transition-all"
+          data-testid="button-differential-cta"
+        >
+          <a href="#form-captacao" className="inline-flex items-center gap-2">
+            Quero essa transformação
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </a>
+        </Button>
       </div>
     </section>
   );

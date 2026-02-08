@@ -9,13 +9,11 @@ function buildWhatsAppLink(params: { phoneE164: string; message: string }) {
 }
 
 export function Footer() {
-  const waLink = useMemo(() => {
-    return buildWhatsAppLink({
-      phoneE164: "554796858847",
-      message:
-        'Ole1, vim pelo seu website. Me cadastrei e recebi a oferta promocional com 10% de desconto, pode me dar mais detalhes, por favor!?',
-    });
-  }, []);
+  const waLink = buildWhatsAppLink({
+    phoneE164: "5547997059338",
+    message:
+      'Olá, vim pelo seu website. Gostaria de agendar uma sessão de diagnóstico.',
+  });
 
   return (
     <footer className="border-t border-border/60 bg-background" data-testid="footer">
@@ -99,7 +97,7 @@ export function Footer() {
                   data-testid="link-footer-whatsapp"
                 >
                   <MessageCircle className="h-4 w-4 flex-shrink-0 group-hover:text-[hsl(var(--accent))]" />
-                  <span>(47) 9685-8847</span>
+                  <span>(47) 99705-9338</span>
                 </a>
               </div>
             </div>

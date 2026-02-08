@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -11,19 +11,20 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <div className="flex items-center gap-3">
-          <Image 
-            src="/logo-v2.png" 
-            alt="logo" 
-            width={40} 
-            height={40}
-          />
-          <div className="font-serif text-xl font-semibold tracking-[0.02em]" data-testid="text-logo">
+          <Image src="/logo-v2.png" alt="logo" width={40} height={40} />
+          <div
+            className="font-serif text-xl font-semibold tracking-[0.02em]"
+            data-testid="text-logo"
+          >
             Lizandra Bortoluzzi
           </div>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-7 text-sm lg:flex" data-testid="nav-primary">
+        <nav
+          className="hidden items-center gap-7 text-sm lg:flex"
+          data-testid="nav-primary"
+        >
           <a
             href="#sobre"
             className="text-foreground/70 transition-colors hover:text-foreground"
@@ -39,11 +40,32 @@ export function Header() {
             Mentoria
           </a>
           <a
+            href="#livro"
+            className="text-foreground/70 transition-colors hover:text-foreground"
+            data-testid="link-livro"
+          >
+            Livro
+          </a>
+          <a
+            href="#palestras"
+            className="text-foreground/70 transition-colors hover:text-foreground"
+            data-testid="link-palestras"
+          >
+            Palestras
+          </a>
+          <a
             href="#transformacao"
             className="text-foreground/70 transition-colors hover:text-foreground"
             data-testid="link-transformacao"
           >
             Transformação
+          </a>
+          <a
+            href="#depoimentos"
+            className="text-foreground/70 transition-colors hover:text-foreground"
+            data-testid="link-depoimentos"
+          >
+            Depoimentos
           </a>
           <a
             href="#contato"
@@ -67,7 +89,11 @@ export function Header() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
         </button>
       </div>
 
@@ -90,11 +116,32 @@ export function Header() {
               Mentoria
             </a>
             <a
+              href="#livro"
+              className="py-2 text-lg font-medium text-foreground/80 hover:text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Livro
+            </a>
+            <a
+              href="#palestras"
+              className="py-2 text-lg font-medium text-foreground/80 hover:text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Palestras
+            </a>
+            <a
               href="#transformacao"
               className="py-2 text-lg font-medium text-foreground/80 hover:text-foreground"
               onClick={() => setIsMenuOpen(false)}
             >
               Transformação
+            </a>
+            <a
+              href="#depoimentos"
+              className="py-2 text-lg font-medium text-foreground/80 hover:text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Depoimentos
             </a>
             <a
               href="#contato"

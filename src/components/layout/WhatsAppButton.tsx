@@ -3,7 +3,7 @@ import { buildWhatsAppLink } from "@/lib/utils";
 
 export function WhatsAppButton() {
   const waLink = buildWhatsAppLink({
-    phoneE164: "554796858847",
+    phoneE164: "5547997059338",
     message: "Olá, vim pelo seu website e gostaria de mais informações sobre a mentoria financeira.",
   });
 

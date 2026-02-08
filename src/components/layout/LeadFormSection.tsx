@@ -34,9 +34,9 @@ export function LeadFormSection() {
   const [offerDecision, setOfferDecision] = useState<OfferDecision | null>(null);
 
   const waLink = buildWhatsAppLink({
-    phoneE164: "554796858847",
+    phoneE164: "5547997059338",
     message:
-      'Olá, vim pelo seu website. Me cadastrei e recebi a oferta de consultoria gratuita com 10% de desconto. Gostaria de agendar!',
+      'Olá, vim pelo seu website. Me cadastrei e recebi a oferta promocional com 10% de desconto, pode me dar mais detalhes, por favor!?',
   });
 
   const form = useForm<LeadFormValues>({
@@ -90,10 +90,10 @@ async function createNotionRow(payload: {
         <div className="relative mx-auto max-w-4xl px-4 py-20">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-semibold leading-tight md:text-5xl" data-testid="text-lead-title">
-              Consultoria gratuita personalizada
+              Agende sua sessão de diagnóstico
             </h2>
             <p className="mt-4 text-base leading-relaxed text-background/85 md:text-lg" data-testid="text-lead-subtitle">
-              Ainda está com dúvidas? Preencha o formulário e receba uma consultoria gratuita — sem compromisso.
+              Ainda está com dúvidas? Preencha o formulário e receba uma sessão de diagnóstico — sem compromisso.
             </p>
           </div>
 

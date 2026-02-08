@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { ClipboardList, MessageCircle, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ClipboardList, MessageCircle, Target, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export function MentoriaSection() {
@@ -105,6 +106,19 @@ export function MentoriaSection() {
             </p>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-12 flex justify-center">
+        <Button
+          asChild
+          className="group h-12 rounded-full bg-foreground px-8 text-background shadow-lg shadow-black/10 hover:bg-[hsl(var(--accent))] transition-all"
+          data-testid="button-mentoria-cta"
+        >
+          <a href="#form-captacao" className="inline-flex items-center gap-2">
+            Quero começar minha jornada
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </a>
+        </Button>
       </div>
     </section>
   );

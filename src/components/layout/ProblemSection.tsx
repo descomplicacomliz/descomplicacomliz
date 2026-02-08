@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { DollarSign, Compass, HeartCrack } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { DollarSign, Compass, HeartCrack, ArrowRight } from "lucide-react";
 
 export function ProblemSection() {
   return (

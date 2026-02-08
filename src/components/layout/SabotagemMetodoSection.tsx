@@ -1,4 +1,6 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function SabotagemMetodoSection() {
   return (
@@ -93,7 +95,7 @@ export function SabotagemMetodoSection() {
                   O que só essa abordagem te entrega
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-foreground/70" data-testid="text-sabotagem-metodo-metodo-text">
-                  Eu observo padrões, comportamento, história e decisões recorrentes. Traduzo números em escolhas práticas, e escolhas em comportamento sustentável. Não é método engessado — é leitura estratégica de contexto com 24 anos de experiência.
+                  Eu observo padrões, comportamentos, história e decisões recorrentes. Traduzo números em escolhas práticas, e escolhas em comportamentos sustentáveis. Não é método engessado — é leitura estratégica de contexto com 24 anos de experiência.
                 </p>
               </div>
 
@@ -116,6 +118,19 @@ export function SabotagemMetodoSection() {
               </div>
             </div>
           </Card>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button
+            asChild
+            className="group h-12 rounded-full bg-foreground px-8 text-background shadow-lg shadow-black/10 hover:bg-[hsl(var(--accent))] transition-all"
+            data-testid="button-sabotagem-cta"
+          >
+            <a href="#form-captacao" className="inline-flex items-center gap-2">
+              Quero superar esses padrões
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

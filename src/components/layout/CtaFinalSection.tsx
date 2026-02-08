@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import { MotionDiv } from "@/components/ui/motion-wrapper";
 
 export function CtaFinalSection() {
   return (
@@ -52,21 +53,28 @@ export function CtaFinalSection() {
               </div>
             </div>
 
-            <Button
-              asChild
-              className="cta-glow group h-12 rounded-full bg-[hsl(var(--accent))] px-7 text-[hsl(var(--accent-foreground))] shadow-lg shadow-black/20 hover:bg-[hsl(var(--accent))]/90"
-              data-testid="button-cta-final"
+            <MotionDiv
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <a 
-                href="https://pay.kiwify.com.br/NkGR0mp" 
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2"
+              <Button
+                asChild
+                className="cta-glow group h-14 rounded-full bg-[hsl(var(--accent))] px-8 text-lg text-[hsl(var(--accent-foreground))] shadow-[0_0_30px_-5px_hsl(var(--accent)/0.4)] hover:shadow-[0_0_40px_-5px_hsl(var(--accent)/0.6)] hover:bg-[hsl(var(--accent))]/90 md:h-16 md:px-10 md:text-xl"
+                data-testid="button-cta-final"
               >
-                Adquirir agora a mentoria financeira
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
-            </Button>
+                <a 
+                  href="https://pay.kiwify.com.br/NkGR0mp" 
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2"
+                >
+                  Adquirir agora a mentoria financeira
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                </a>
+              </Button>
+            </MotionDiv>
 
             <div className="text-sm text-background/75" data-testid="text-cta-final-urgency">
               Prosperidade começa com uma decisão consciente
