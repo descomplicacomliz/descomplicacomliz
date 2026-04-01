@@ -12,7 +12,7 @@ export function SabotagemMetodoSection() {
       <div className="relative mx-auto max-w-6xl px-4 py-20">
         <div className="mx-auto max-w-3xl text-center">
           <div
-            className="inline-flex rounded-full bg-background px-4 py-2 text-xs font-semibold tracking-[0.14em] text-foreground"
+            className="section-badge inline-flex rounded-full bg-background px-5 py-2.5 text-sm font-semibold tracking-[0.14em] text-foreground"
             data-testid="text-sabotagem-metodo-badge"
           >
             Sabotagem + Abordagem
@@ -123,7 +123,7 @@ export function SabotagemMetodoSection() {
         <div className="mt-12 flex justify-center">
           <Button
             asChild
-            className="group h-12 rounded-full bg-foreground px-8 text-background shadow-lg shadow-black/10 hover:bg-[hsl(var(--accent))] transition-all"
+            className="cta-glow cta-primary group h-14 rounded-full bg-linear-to-r from-[hsl(var(--accent))] to-[hsl(35,50%,45%)] px-10 text-base font-bold text-white shadow-[0_0_30px_-5px_hsl(var(--accent)/0.5)] hover:shadow-[0_0_50px_-5px_hsl(var(--accent)/0.7)] hover:brightness-110 transition-all"
             data-testid="button-sabotagem-cta"
           >
             <a href="#form-captacao" className="inline-flex items-center gap-2">

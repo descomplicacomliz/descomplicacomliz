@@ -8,16 +8,16 @@ export function MentoriaSection() {
     <section className="mx-auto max-w-6xl px-4 py-16" id="mentoria" data-testid="section-mentoria">
       <div className="mx-auto max-w-3xl text-center">
         <div
-          className="inline-flex rounded-full bg-[hsl(var(--secondary))] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-foreground/80"
+          className="section-badge inline-flex rounded-full bg-[hsl(var(--secondary))] px-5 py-2.5 text-sm font-semibold tracking-[0.14em] text-foreground/80"
           data-testid="text-mentoria-badge"
         >
           Como funciona
         </div>
         <h2 className="mt-6 font-serif text-3xl font-semibold leading-tight md:text-4xl" data-testid="text-mentoria-title">
-          A jornada de transformação da mentoria
+          Você <span className="text-[hsl(var(--accent))]">PROSPERÁ</span> em 4 PASSOS.
         </h2>
         <p className="mt-3 text-foreground/70" data-testid="text-mentoria-subtitle">
-          A mentoria é composta por 4 encontros individuais realizados 1 vez por semana, ao longo de 1 mês, com acompanhamento contínuo durante todo o processo.
+          Na mentoria você terá o meu acompanhamento individual contínuo durante todo o processo.
         </p>
       </div>
 
@@ -51,7 +51,7 @@ export function MentoriaSection() {
           >
             <div className="flex items-start gap-4">
               <div
-                className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-gradient-to-br from-foreground to-[hsl(var(--accent))] font-serif text-2xl font-semibold text-background shadow-sm"
+                className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-linear-to-br from-foreground to-[hsl(var(--accent))] font-serif text-2xl font-semibold text-background shadow-sm"
                 data-testid={`badge-process-step-${item.step}`}
               >
                 {item.step}
@@ -111,12 +111,12 @@ export function MentoriaSection() {
       <div className="mt-12 flex justify-center">
         <Button
           asChild
-          className="group h-12 rounded-full bg-foreground px-8 text-background shadow-lg shadow-black/10 hover:bg-[hsl(var(--accent))] transition-all"
+          className="cta-glow cta-primary group h-14 rounded-full bg-linear-to-r from-[hsl(var(--accent))] to-[hsl(35,50%,45%)] px-10 text-base font-bold text-white shadow-[0_0_30px_-5px_hsl(var(--accent)/0.5)] hover:shadow-[0_0_50px_-5px_hsl(var(--accent)/0.7)] hover:brightness-110 transition-all"
           data-testid="button-mentoria-cta"
         >
           <a href="#form-captacao" className="inline-flex items-center gap-2">
             Quero começar minha jornada
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </a>
         </Button>
       </div>

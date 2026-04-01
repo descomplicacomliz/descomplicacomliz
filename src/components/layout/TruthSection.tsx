@@ -10,15 +10,40 @@ export function TruthSection() {
       </div>
       <div className="mx-auto max-w-6xl px-4 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex rounded-full bg-[hsl(var(--accent))] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-background" data-testid="text-truth-badge">
+          <div className="section-badge inline-flex rounded-full bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold tracking-[0.14em] text-background" data-testid="text-truth-badge">
             A Verdade
           </div>
           <h2 className="mt-6 font-serif text-3xl font-semibold leading-tight md:text-4xl" data-testid="text-truth-title">
-            O medo não é perder o controle do dinheiro
+            Eu sei que você tem medo de não conseguir viver a vida que realmente deseja.
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-background/85 md:text-lg" data-testid="text-truth-text">
-            O medo real é <span className="font-semibold text-[hsl(var(--accent))]">confirmar, em números, que as escolhas feitas até aqui não estão sustentando a vida que você quer viver</span>. Por isso olhar para os números vira confronto, não cálculo. E você evita, não por falta de capacidade, mas porque os números ativam culpa, frustração e a sensação de estar sempre devendo algo a si mesma.
-          </p>
+          <div className="mt-6 space-y-5 text-base leading-relaxed text-background/85 md:text-lg" data-testid="text-truth-text">
+            <p>
+              O medo real é...
+            </p>
+            <ul className="space-y-3 text-left md:text-center">
+              <li>
+                <span className="font-bold text-[hsl(var(--accent))]">NÃO PODER</span>{" "}
+                viajar com tranquilidade.
+              </li>
+              <li>
+                <span className="font-bold text-[hsl(var(--accent))]">DEIXAR DE</span>{" "}
+                aproveitar experiências incríveis por conta de escolhas mal feitas até aqui, que geram sentimento de{" "}
+                <span className="font-bold text-[hsl(var(--accent))]">culpa</span>.
+              </li>
+              <li>
+                Sentir-se <span className="font-bold text-[hsl(var(--accent))]">insegura</span>{" "}
+                nas escolhas que faz.
+              </li>
+              <li>
+                E perceber que a vida que você sonha{" "}
+                <span className="italic">sempre fica para depois</span>...{" "}
+                <span className="text-background/60">(e esse depois não acontece)</span>
+              </li>
+            </ul>
+            <p className="mt-6 border-t border-background/15 pt-6 font-serif text-xl italic text-[hsl(var(--accent))] md:text-2xl">
+              E foi por isso que eu criei essa mentoria: para te ajudar a construir uma vida que faça sentido agora.
+            </p>
+          </div>
         </div>
       </div>
     </section>

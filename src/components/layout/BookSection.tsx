@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/components/ui/motion-wrapper";
+import Image from "next/image";
 import {
   BookOpen,
   Brain,
@@ -20,72 +21,41 @@ export function BookSection() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-          {/* Left Side - Book Visual */}
-          <MotionDiv
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative mx-auto max-w-md">
-              <Card className="group relative overflow-hidden rounded-3xl border-[hsl(var(--accent))]/30 bg-linear-to-br from-background via-[hsl(var(--secondary))]/20 to-background p-10 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_hsl(var(--accent)/0.4)]">
-                <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-[hsl(var(--accent))]/25 blur-3xl" />
-                  <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-foreground/15 blur-3xl" />
-                </div>
-
-                <div className="relative text-center">
-                  <div className="mx-auto mb-6 grid h-20 w-20 place-items-center rounded-full bg-[hsl(var(--accent))]/15 ring-4 ring-[hsl(var(--accent))]/20">
-                    <BookOpen className="h-10 w-10 text-[hsl(var(--accent))]" />
-                  </div>
-
-                  <h3 className="font-serif text-3xl font-bold leading-tight text-foreground md:text-4xl">
-                    Mentes de Sucesso
-                  </h3>
-
-                  <p className="mt-3 font-serif text-lg italic text-[hsl(var(--accent))]">
-                    O poder da PNL na construção de uma mentalidade vencedora
-                  </p>
-
-                  <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[hsl(var(--accent))]/10 px-4 py-2 text-sm font-semibold text-foreground/80">
-                    <Truck className="h-4 w-4 text-[hsl(var(--accent))]" />
-                    Livro Físico • Capa Brochura
-                  </div>
-                </div>
-              </Card>
-
-              {/* Decorative Elements */}
-              <MotionDiv
-                className="pointer-events-none absolute -right-4 -top-4 h-16 w-16 rounded-full bg-[hsl(var(--accent))]/20 blur-2xl"
-                animate={{ y: [0, -15, 0], x: [0, 10, 0] }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              <MotionDiv
-                className="pointer-events-none absolute -bottom-6 -left-6 h-20 w-20 rounded-full bg-foreground/10 blur-2xl"
-                animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
-                transition={{
-                  duration: 7,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </div>
-          </MotionDiv>
-
-          {/* Right Side - Content */}
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:flex-row-reverse">
+          {/* Imagem do livro à direita */}
           <MotionDiv
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative order-2 md:order-2"
+          >
+            <div className="relative" data-testid="img-book">
+              <div
+                className="overflow-hidden rounded-3xl shadow-xl"
+                data-testid="box-book-photo"
+              >
+                <Image
+                  src="/foto-livro.png"
+                  alt="Livro Mentes de Sucesso"
+                  width={540}
+                  height={700}
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </MotionDiv>
+
+          {/* Conteúdo textual à esquerda */}
+          <MotionDiv
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
+            className="order-1 md:order-1"
           >
-            <div className="inline-flex rounded-full bg-[hsl(var(--secondary))] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-foreground/80">
+            <div className="section-badge inline-flex rounded-full bg-[hsl(var(--secondary))] px-5 py-2.5 text-sm font-semibold tracking-[0.14em] text-foreground/80">
               Livro
             </div>
 
@@ -157,7 +127,7 @@ export function BookSection() {
 
                 <Button
                   asChild
-                  className="cta-glow group h-12 rounded-full bg-foreground px-6 text-background shadow-lg hover:bg-[hsl(var(--accent))]"
+                  className="cta-glow cta-primary group h-12 rounded-full bg-linear-to-r from-[hsl(var(--accent))] to-[hsl(35,50%,45%)] px-6 font-bold text-white shadow-[0_0_25px_-5px_hsl(var(--accent)/0.5)] hover:shadow-[0_0_40px_-5px_hsl(var(--accent)/0.7)] hover:brightness-110"
                 >
                   <a
                     href="https://pay.kiwify.com.br/pvxBUI7"

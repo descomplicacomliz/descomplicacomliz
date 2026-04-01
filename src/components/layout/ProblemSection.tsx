@@ -6,7 +6,7 @@ export function ProblemSection() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16" id="problema">
       <div className="mx-auto max-w-3xl text-center">
-        <div className="inline-flex rounded-full bg-[hsl(var(--secondary))] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-foreground/80" data-testid="text-problem-badge">
+        <div className="section-badge inline-flex rounded-full bg-[hsl(var(--secondary))] px-5 py-2.5 text-sm font-semibold tracking-[0.14em] text-foreground/80" data-testid="text-problem-badge">
           Reconhece essa sensação?
         </div>
         <h2 className="mt-6 font-serif text-3xl font-semibold leading-tight md:text-4xl" data-testid="text-problem-title">
@@ -42,7 +42,7 @@ export function ProblemSection() {
           >
             <div className="flex items-start gap-4">
               <div
-                className="grid size-12 flex-shrink-0 place-items-center overflow-hidden rounded-full bg-gradient-to-br from-foreground to-[hsl(var(--accent))] text-background shadow-sm"
+                className="grid size-12 shrink-0 place-items-center overflow-hidden rounded-full bg-linear-to-br from-foreground to-[hsl(var(--accent))] text-background shadow-sm"
                 data-testid={`icon-problem-${idx}`}
               >
                 <item.icon className="h-6 w-6" />
@@ -58,6 +58,13 @@ export function ProblemSection() {
             </div>
           </Card>
         ))}
+      </div>
+
+      {/* Frase de transição */}
+      <div className="mt-14 text-center">
+        <h3 className="font-serif text-3xl font-bold leading-tight text-[hsl(var(--accent))] md:text-4xl" data-testid="text-problem-calma">
+          CALMA, RESPIRA, EU POSSO TE AJUDAR!
+        </h3>
       </div>
     </section>
   );

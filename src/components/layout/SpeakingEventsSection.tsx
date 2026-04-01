@@ -108,7 +108,7 @@ export function SpeakingEventsSection() {
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <div
-            className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--secondary))] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-foreground/80"
+            className="section-badge inline-flex items-center gap-2 rounded-full bg-[hsl(var(--secondary))] px-5 py-2.5 text-sm font-semibold tracking-[0.14em] text-foreground/80"
             data-testid="text-speaking-badge"
           >
             <Mic2 className="h-4 w-4 text-[hsl(var(--accent))]" />

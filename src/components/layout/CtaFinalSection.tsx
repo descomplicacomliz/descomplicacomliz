@@ -4,7 +4,11 @@ import { MotionDiv } from "@/components/ui/motion-wrapper";
 
 export function CtaFinalSection() {
   return (
-    <section className="relative overflow-hidden bg-foreground text-background" id="contato" data-testid="section-cta-final">
+    <section
+      className="relative overflow-hidden bg-foreground text-background"
+      id="contato"
+      data-testid="section-cta-final"
+    >
       <div className="pointer-events-none absolute inset-0 opacity-60">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(187,151,79,0.35)_0%,rgba(55,52,53,0)_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_10%,rgba(193,164,142,0.35)_0%,rgba(55,52,53,0)_60%)]" />
@@ -12,17 +16,28 @@ export function CtaFinalSection() {
 
       <div className="relative mx-auto max-w-6xl px-4 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-serif text-3xl font-semibold leading-tight md:text-4xl" data-testid="text-cta-final-title">
+          <h2
+            className="font-serif text-3xl font-semibold leading-tight md:text-4xl"
+            data-testid="text-cta-final-title"
+          >
             Retome o controle da sua vida financeira
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-background/85" data-testid="text-cta-final-subtitle">
-            Quando você decide se levar a sério financeiramente, não compra garantia. Você constrói estrutura e consciência que devolvem leveza, clareza e segurança emocional.
+          <p
+            className="mt-4 text-base leading-relaxed text-background/85"
+            data-testid="text-cta-final-subtitle"
+          >
+            Quando você decide se levar a sério financeiramente, não compra
+            garantia. Você constrói estrutura e consciência que devolvem leveza,
+            clareza e segurança emocional.
           </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2" data-testid="grid-cta-final-benefits">
+          <div
+            className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2"
+            data-testid="grid-cta-final-benefits"
+          >
             {[
               "Mentoria individual e personalizada",
-              "4 encontros semanais estruturados",
+              "Encontros semanais estruturados",
               "Suporte contínuo via WhatsApp",
               "Método autoral com 24 anos de experiência",
               "Transformação comportamental sustentável",
@@ -41,42 +56,34 @@ export function CtaFinalSection() {
           </div>
 
           <div className="mt-10 flex flex-col items-center gap-6">
-            {/* Pricing Section */}
-            <div className="rounded-2xl bg-black/30 px-8 py-6 backdrop-blur-sm" data-testid="box-pricing">
-              <div className="text-center">
-                <div className="font-serif text-3xl font-bold text-[hsl(var(--accent))] md:text-4xl" data-testid="text-price-installments">
-                  12x de R$309,96
-                </div>
-                <div className="mt-3 text-base text-background/90 md:text-lg" data-testid="text-price-cash">
-                  À vista R$2.997,00
-                </div>
-              </div>
-            </div>
-
             <MotionDiv
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="cta-mega-glow relative"
             >
               <Button
                 asChild
-                className="cta-glow group h-14 rounded-full bg-[hsl(var(--accent))] px-8 text-lg text-[hsl(var(--accent-foreground))] shadow-[0_0_30px_-5px_hsl(var(--accent)/0.4)] hover:shadow-[0_0_40px_-5px_hsl(var(--accent)/0.6)] hover:bg-[hsl(var(--accent))]/90 md:h-16 md:px-10 md:text-xl"
+                className="cta-glow cta-final group relative h-16 rounded-full bg-linear-to-r from-[hsl(var(--accent))] via-[hsl(42,60%,55%)] to-[hsl(var(--accent))] px-10 text-lg font-extrabold text-white shadow-[0_0_50px_-5px_hsl(var(--accent)/0.6),0_0_100px_-15px_hsl(var(--accent)/0.3)] hover:shadow-[0_0_70px_-5px_hsl(var(--accent)/0.8),0_0_140px_-15px_hsl(var(--accent)/0.5)] hover:brightness-110 md:h-20 md:px-14 md:text-2xl"
                 data-testid="button-cta-final"
               >
-                <a 
-                  href="https://pay.kiwify.com.br/NkGR0mp" 
+                <a
+                  href="https://pay.kiwify.com.br/NkGR0mp"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-3"
                 >
                   Adquirir agora a mentoria financeira
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRight className="h-6 w-6 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
             </MotionDiv>
 
-            <div className="text-sm text-background/75" data-testid="text-cta-final-urgency">
+            <div
+              className="text-sm text-background/75"
+              data-testid="text-cta-final-urgency"
+            >
               Prosperidade começa com uma decisão consciente
             </div>
           </div>

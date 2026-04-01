@@ -72,7 +72,7 @@ export function TransformationSection() {
         <div className="mt-12 flex justify-center">
           <Button
             asChild
-            className="cta-glow group h-12 rounded-full bg-[hsl(var(--accent))] px-8 text-[hsl(var(--accent-foreground))] shadow-lg hover:bg-[hsl(var(--accent))]/90 transition-all"
+            className="cta-glow cta-primary group h-14 rounded-full bg-linear-to-r from-[hsl(var(--accent))] to-[hsl(35,50%,45%)] px-10 text-base font-bold text-white shadow-[0_0_30px_-5px_hsl(var(--accent)/0.5)] hover:shadow-[0_0_50px_-5px_hsl(var(--accent)/0.7)] hover:brightness-110 transition-all"
             data-testid="button-transformation-cta"
           >
             <a href="#form-captacao" className="inline-flex items-center gap-2">

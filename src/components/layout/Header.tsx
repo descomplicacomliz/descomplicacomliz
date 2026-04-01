@@ -76,7 +76,7 @@ export function Header() {
           </a>
           <Button
             asChild
-            className="cta-glow rounded-full bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] shadow-lg shadow-black/10 hover:bg-[hsl(var(--accent))]/90"
+            className="cta-glow cta-header relative rounded-full bg-linear-to-r from-[hsl(var(--accent))] to-[hsl(35,50%,42%)] px-6 py-2.5 font-bold text-white shadow-[0_0_20px_-4px_hsl(var(--accent)/0.5)] hover:shadow-[0_0_35px_-4px_hsl(var(--accent)/0.7)] hover:brightness-110"
             data-testid="button-cta-top"
           >
             <a href="#form-captacao">Quero mudar agora</a>
@@ -152,7 +152,7 @@ export function Header() {
             </a>
             <Button
               asChild
-              className="mt-2 w-full cta-glow rounded-xl bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))]"
+              className="mt-2 w-full cta-glow cta-header rounded-xl bg-linear-to-r from-[hsl(var(--accent))] to-[hsl(35,50%,42%)] font-bold text-white shadow-[0_0_20px_-4px_hsl(var(--accent)/0.5)]"
               onClick={() => setIsMenuOpen(false)}
             >
               <a href="#form-captacao">Quero mudar agora</a>

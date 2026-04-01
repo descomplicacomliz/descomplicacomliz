@@ -48,12 +48,25 @@ export interface ButtonProps
   asChild?: boolean
 }
 
+// Adiciona classe de onda animada automática para botões CTA
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+
+    // Identifica se é um botão CTA especial (header ou formulário)
+    // Se tiver data-testid igual aos botões especiais, não aplica a onda automática
+    // Caso contrário, aplica a classe cta-wave
+    let extraClass = ""
+    if (
+      // @ts-ignore
+      !(props["data-testid"] === "button-cta-top" || props["data-testid"] === "button-submit-lead")
+    ) {
+      extraClass = "cta-wave"
+    }
+
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, className }), extraClass)}
         ref={ref}
         {...props}
       />
