@@ -5,7 +5,11 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export function MentoriaSection() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16" id="mentoria" data-testid="section-mentoria">
+    <section
+      className="mx-auto max-w-6xl px-4 py-16"
+      id="mentoria"
+      data-testid="section-mentoria"
+    >
       <div className="mx-auto max-w-3xl text-center">
         <div
           className="section-badge inline-flex rounded-full bg-[hsl(var(--secondary))] px-5 py-2.5 text-sm font-semibold tracking-[0.14em] text-foreground/80"
@@ -13,11 +17,19 @@ export function MentoriaSection() {
         >
           Como funciona
         </div>
-        <h2 className="mt-6 font-serif text-3xl font-semibold leading-tight md:text-4xl" data-testid="text-mentoria-title">
-          Você <span className="text-[hsl(var(--accent))]">PROSPERÁ</span> em 4 PASSOS.
+        <h2
+          className="mt-6 font-serif text-3xl font-semibold leading-tight md:text-4xl"
+          data-testid="text-mentoria-title"
+        >
+          Você <span className="text-[hsl(var(--accent))]">PRÓSPERA</span> em 4
+          PASSOS.
         </h2>
-        <p className="mt-3 text-foreground/70" data-testid="text-mentoria-subtitle">
-          Na mentoria você terá o meu acompanhamento individual contínuo durante todo o processo.
+        <p
+          className="mt-3 text-foreground/70"
+          data-testid="text-mentoria-subtitle"
+        >
+          Na mentoria você terá o meu acompanhamento individual contínuo durante
+          todo o processo.
         </p>
       </div>
 
@@ -35,7 +47,8 @@ export function MentoriaSection() {
           },
           {
             step: "3",
-            title: "Diagnóstico da realidade financeira e estruturação dos números",
+            title:
+              "Diagnóstico da realidade financeira e estruturação dos números",
             desc: "Com sua consciência emocional trabalhada, você estrutura suas finanças de forma sustentável. Cada número ganha significado e propósito.",
           },
           {
@@ -57,10 +70,16 @@ export function MentoriaSection() {
                 {item.step}
               </div>
               <div>
-                <div className="font-serif text-xl font-semibold" data-testid={`text-process-title-${item.step}`}>
+                <div
+                  className="font-serif text-xl font-semibold"
+                  data-testid={`text-process-title-${item.step}`}
+                >
                   {item.title}
                 </div>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/65" data-testid={`text-process-desc-${item.step}`}>
+                <p
+                  className="mt-2 text-sm leading-relaxed text-foreground/65"
+                  data-testid={`text-process-desc-${item.step}`}
+                >
                   {item.desc}
                 </p>
               </div>
@@ -98,10 +117,16 @@ export function MentoriaSection() {
             >
               <f.icon className="h-7 w-7 text-[hsl(var(--accent))]" />
             </div>
-            <div className="mt-4 font-serif text-xl font-semibold" data-testid={`text-mentoria-feature-title-${idx}`}>
+            <div
+              className="mt-4 font-serif text-xl font-semibold"
+              data-testid={`text-mentoria-feature-title-${idx}`}
+            >
               {f.title}
             </div>
-            <p className="mt-2 text-sm leading-relaxed text-foreground/65" data-testid={`text-mentoria-feature-desc-${idx}`}>
+            <p
+              className="mt-2 text-sm leading-relaxed text-foreground/65"
+              data-testid={`text-mentoria-feature-desc-${idx}`}
+            >
               {f.desc}
             </p>
           </Card>
